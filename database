@@ -1,0 +1,35 @@
+create database sprk3;
+
+-- show all the existing databases
+show databases;
+-- use the databases which ever is required
+use sprk3;
+-- show all the tables in the selected database
+show tables;
+-- creating a new table in the selected or used database
+create table courses(
+	cid int primary key,
+    cname varchar(50) not null,
+    fees decimal(8,2) not null, 
+    duration varchar(50) not null
+);
+-- show all created database
+show tables;
+-- describe the structure of the tables mention here
+desc courses;
+-- insert the data into mentioned tables 
+insert into courses (cid, cname, fees, duration)
+values
+(2,"CSS",3000,"15 days"),
+(3,"C",5000,"25 days"),
+(4,"C++",7000,"35 days"),
+(5,"MYSQL", 9000, "45 days"),
+(6,"Python",1200,"45 days"),
+(7,"Django",18000,"30 days"),
+(8,"Python Libraries",20000,"15 days"),
+(9,"Java",15000,"45 days"),
+(10,"Advance Java", 15000,"20 days");
+-- Display all the existing data from mentioned columns of the table
+select * from courses;
+select cname from courses;
+select cname,fees from courses;
